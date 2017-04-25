@@ -29,7 +29,7 @@ instruction
 
 
 
-    // run shared js-env code - pre-init
+    // run shared js-env code - init-before
     (function () {
         // init local
         local = {};
@@ -62,8 +62,8 @@ instruction
 
 
 
-    // post-init
-    // run browser js-env code - post-init
+    // init-after
+    // run browser js-env code - init-after
     /* istanbul ignore next */
     case 'browser':
         local.testRunBrowser = function (event) {
@@ -115,7 +115,7 @@ instruction
                     /*jslint evil: true*/
                     eval(document.querySelector('#inputTextareaEval1').value);
                 } catch (errorCaught) {
-                    console.error(errorCaught.stack);
+                    console.error(errorCaught);
                 }
             }
         };
@@ -151,7 +151,7 @@ instruction
 
 
 
-    // run node js-env code - post-init
+    // run node js-env code - init-after
     /* istanbul ignore next */
     case 'node':
         // export local
@@ -260,9 +260,9 @@ utility2-comment -->\n\
                 local.assetsDict['/assets.index.template.html'],
                 {
                     env: local.objectSetDefault(local.env, {
-                        npm_package_description: 'example module',
-                        npm_package_name: 'example',
-                        npm_package_nameAlias: 'example',
+                        npm_package_description: 'the greatest app in the world!',
+                        npm_package_name: 'my-app',
+                        npm_package_nameAlias: 'my_app',
                         npm_package_version: '0.0.1'
                     })
                 }
@@ -274,11 +274,11 @@ utility2-comment -->\n\
                     String(match0);
                     switch (match1) {
                     case 'npm_package_description':
-                        return 'example module';
+                        return 'the greatest app in the world!';
                     case 'npm_package_name':
-                        return 'example';
+                        return 'my-app';
                     case 'npm_package_nameAlias':
-                        return 'example';
+                        return 'my_app';
                     case 'npm_package_version':
                         return '0.0.1';
                     }
@@ -291,14 +291,15 @@ utility2-comment -->\n\
         local.assetsDict['/assets.example.js'] =
             local.assetsDict['/assets.example.js'] ||
             local.fs.readFileSync(__filename, 'utf8');
+        // bug-workaround - long $npm_package_buildCustomOrg
+        /* jslint-ignore-begin */
         local.assetsDict['/assets.npmdoc_torrent.rollup.js'] =
             local.assetsDict['/assets.npmdoc_torrent.rollup.js'] ||
             local.fs.readFileSync(
-                // npmdoc-hack
-                local.npmdoc_torrent.__dirname +
-                    '/lib.npmdoc_torrent.js',
+                local.npmdoc_torrent.__dirname + '/lib.npmdoc_torrent.js',
                 'utf8'
             ).replace((/^#!/), '//');
+        /* jslint-ignore-end */
         local.assetsDict['/favicon.ico'] = local.assetsDict['/favicon.ico'] || '';
         // if $npm_config_timeout_exit exists,
         // then exit this process after $npm_config_timeout_exit ms
