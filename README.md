@@ -1,9 +1,14 @@
-# api documentation for  [torrent (v2.0.0)](https://github.com/maxogden/torrent)  [![npm package](https://img.shields.io/npm/v/npmdoc-torrent.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-torrent) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-torrent.svg)](https://travis-ci.org/npmdoc/node-npmdoc-torrent)
+# npmdoc-torrent
+
+#### basic api documentation for  [torrent (v2.0.0)](https://github.com/maxogden/torrent)  [![npm package](https://img.shields.io/npm/v/npmdoc-torrent.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-torrent) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-torrent.svg)](https://travis-ci.org/npmdoc/node-npmdoc-torrent)
+
 #### torrent from the command line
 
-[![NPM](https://nodei.co/npm/torrent.png?downloads=true)](https://www.npmjs.com/package/torrent)
+[![NPM](https://nodei.co/npm/torrent.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/torrent)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-torrent/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-torrent_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-torrent/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-torrent/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-torrent/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-torrent/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-torrent/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-torrent/build/screenCapture.npmPackageListing.svg)
 
@@ -51,22 +56,18 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "maxogden",
-            "email": "max@maxogden.com"
+            "name": "maxogden"
         },
         {
-            "name": "substack",
-            "email": "substack@gmail.com"
+            "name": "substack"
         },
         {
-            "name": "linusu",
-            "email": "linus@folkdatorn.se"
+            "name": "linusu"
         }
     ],
     "name": "torrent",
     "optionalDependencies": {},
     "preferGlobal": true,
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/maxogden/torrent.git"
@@ -77,16 +78,6 @@
     "version": "2.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module torrent](#apidoc.module.torrent)
-
-
-
-# <a name="apidoc.module.torrent"></a>[module torrent](#apidoc.module.torrent)
 
 
 
